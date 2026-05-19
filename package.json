@@ -17,10 +17,10 @@
     ],
     "repository": {
         "type": "git",
-        "url": "https://github.com/enBonnet/greeny-theme-vscode.git"
+        "url": "https://github.com/enBonnet/green-night-theme-vscode.git"
     },
     "bugs": {
-        "url": "https://github.com/enBonnet/greeny-theme-vscode/issues"
+        "url": "https://github.com/enBonnet/green-night-theme-vscode/issues"
     },
     "engines": {
         "vscode": "^1.13.0"

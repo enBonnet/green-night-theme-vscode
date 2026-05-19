@@ -188,7 +188,7 @@ pnpm run package
 
 Contributions are welcome! If you find any issues or have suggestions for improvements, please feel free to:
 
-1. Open an [issue](https://github.com/enbonnet/greeny-theme-vscode/issues)
+1. Open an [issue](https://github.com/enbonnet/green-night-theme-vscode/issues)
 2. Submit a pull request
 3. Share your feedback
 
