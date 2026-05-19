@@ -1,0 +1,58 @@
+{
+    "name": "greeny-theme",
+    "version": "1.0.0",
+    "displayName": "Greeny Theme",
+    "description": "Greeny Theme for Visual Studio Code",
+    "publisher": "enbonnet",
+    "license": "MIT",
+    "scripts": {
+        "build": "node ./scripts/build.js",
+        "lint": "node ./scripts/lint.js",
+        "package": "vsce package -o ./bin/greeny.vsix",
+        "vscode:prepublish": "npm run build",
+        "vsce:publish": "vsce publish"
+    },
+    "maintainers": [
+        "Ender Bonnet"
+    ],
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/enBonnet/greeny-theme-vscode.git"
+    },
+    "bugs": {
+        "url": "https://github.com/enBonnet/greeny-theme-vscode/issues"
+    },
+    "engines": {
+        "vscode": "^1.13.0"
+    },
+    "categories": [
+        "Themes"
+    ],
+    "keywords": [
+        "greeny",
+        "dark",
+        "theme",
+        "color-theme"
+    ],
+    "icon": "images/icon.png",
+    "contributes": {
+        "themes": [
+            {
+                "label": "Greeny Theme",
+                "uiTheme": "vs-dark",
+                "path": "./theme/greeny.json"
+            },
+            {
+                "label": "Greeny Theme Soft",
+                "uiTheme": "vs-dark",
+                "path": "./theme/greeny-soft.json"
+            }
+        ]
+    },
+    "devDependencies": {
+        "js-yaml": "^4.1.1",
+        "prettier": "^3.0.0",
+        "tinycolor2": "^1.6.0",
+        "vsce": "^2.15.0"
+    }
+}
