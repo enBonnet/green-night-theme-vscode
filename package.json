@@ -1,14 +1,14 @@
 {
-    "name": "greeny-theme",
+    "name": "green-night-theme",
     "version": "1.0.0",
-    "displayName": "Greeny Theme",
-    "description": "Greeny Theme for Visual Studio Code",
+    "displayName": "Green Night Theme",
+    "description": "Green Night Theme for Visual Studio Code",
     "publisher": "enbonnet",
     "license": "MIT",
     "scripts": {
         "build": "node ./scripts/build.js",
         "lint": "node ./scripts/lint.js",
-        "package": "mkdir -p ./bin && vsce package -o ./bin/greeny.vsix",
+        "package": "mkdir -p ./bin && vsce package -o ./bin/green-night.vsix",
         "vscode:prepublish": "npm run build",
         "vsce:publish": "vsce publish"
     },
@@ -29,7 +29,9 @@
         "Themes"
     ],
     "keywords": [
-        "greeny",
+        "jade",
+        "green-night",
+        "green",
         "dark",
         "theme",
         "color-theme"
@@ -38,14 +40,14 @@
     "contributes": {
         "themes": [
             {
-                "label": "Greeny Theme",
+                "label": "Green Night Theme",
                 "uiTheme": "vs-dark",
-                "path": "./theme/greeny.json"
+                "path": "./theme/green-night.json"
             },
             {
-                "label": "Greeny Theme Soft",
+                "label": "Green Night Theme Soft",
                 "uiTheme": "vs-dark",
-                "path": "./theme/greeny-soft.json"
+                "path": "./theme/green-night-soft.json"
             }
         ]
     },

@@ -13,11 +13,11 @@ module.exports = async () => {
 
     return Promise.all([
         fs.promises.writeFile(
-            path.join(THEME_DIR, 'greeny.json'),
+            path.join(THEME_DIR, 'green-night.json'),
             JSON.stringify(base, null, 4)
         ),
         fs.promises.writeFile(
-            path.join(THEME_DIR, 'greeny-soft.json'),
+            path.join(THEME_DIR, 'green-night-soft.json'),
             JSON.stringify(soft, null, 4)
         ),
     ]);

@@ -1,9 +1,9 @@
 $schema: vscode://schemas/color-theme
-name: Greeny
+name: Green Night
 author: Ender Bonnet
 maintainers:
   - Ender Bonnet <enbonnet@gmail.com>
-semanticClass: theme.greeny
+semanticClass: theme.green-night
 semanticHighlighting: true
 greeny:
   base:

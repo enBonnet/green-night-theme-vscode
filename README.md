@@ -1,11 +1,11 @@
 <div align="center">
-<h1>Greeny Theme for Visual Studio Code</h1>
+<h1>Green Night Theme for Visual Studio Code</h1>
 
-[![Version](https://img.shields.io/visual-studio-marketplace/v/enbonnet.greeny-theme?color=4BEA9A&style=for-the-badge&label=VS%20Marketplace)](https://marketplace.visualstudio.com/items?itemName=enbonnet.greeny-theme)
-[![Open VSX Version](https://img.shields.io/open-vsx/v/enBonnet/greeny-theme?color=C4B5FF&style=for-the-badge&label=Open%20VSX)](https://open-vsx.org/extension/enBonnet/greeny-theme)
-[![Downloads](https://img.shields.io/visual-studio-marketplace/d/enbonnet.greeny-theme?color=5FFFC0&style=for-the-badge&label=Downloads)](https://marketplace.visualstudio.com/items?itemName=enbonnet.greeny-theme)
+[![Version](https://img.shields.io/visual-studio-marketplace/v/enbonnet.green-night-theme?color=4BEA9A&style=for-the-badge&label=VS%20Marketplace)](https://marketplace.visualstudio.com/items?itemName=enbonnet.green-night-theme)
+[![Open VSX Version](https://img.shields.io/open-vsx/v/enBonnet/green-night-theme?color=C4B5FF&style=for-the-badge&label=Open%20VSX)](https://open-vsx.org/extension/enBonnet/green-night-theme)
+[![Downloads](https://img.shields.io/visual-studio-marketplace/d/enbonnet.green-night-theme?color=5FFFC0&style=for-the-badge&label=Downloads)](https://marketplace.visualstudio.com/items?itemName=enbonnet.green-night-theme)
 
-<img src="./images/icon-gif.gif" alt="Greeny Theme for Visual Studio Code" width="300">
+<img src="./images/icon-gif.gif" alt="Green Night Theme for Visual Studio Code" width="300">
 </div>
 
 ## Table of Contents
@@ -31,18 +31,18 @@
 
 ## Description
 
-This is the Greeny Theme for Visual Studio Code.
+This is the Green Night Theme for Visual Studio Code.
 
 ## Preview
 
 ### Base Theme
 <div align="center">
-<img src="./images/screenshots/base.png" alt="Greeny Theme Base" width="600">
+<img src="./images/screenshots/base.png" alt="Green Night Theme Base" width="600">
 </div>
 
 ### Soft Variant
 <div align="center">
-<img src="./images/screenshots/soft.png" alt="Greeny Theme Soft" width="600">
+<img src="./images/screenshots/soft.png" alt="Green Night Theme Soft" width="600">
 </div>
 
 ## Color Palette
@@ -115,17 +115,17 @@ Additional languages (R, SQL, Dockerfile, JSON, XML, etc.) are covered by the ge
 ## Installation
 
 ### VS Code Marketplace
-[![VS Code Marketplace](https://img.shields.io/visual-studio-marketplace/v/enbonnet.greeny-theme?style=for-the-badge&label=VS%20Code%20Marketplace&color=4BEA9A)](https://marketplace.visualstudio.com/items?itemName=enbonnet.greeny-theme)
+[![VS Code Marketplace](https://img.shields.io/visual-studio-marketplace/v/enbonnet.green-night-theme?style=for-the-badge&label=VS%20Code%20Marketplace&color=4BEA9A)](https://marketplace.visualstudio.com/items?itemName=enbonnet.green-night-theme)
 
 ### Open VSX Registry
-[![Open VSX Registry](https://img.shields.io/open-vsx/v/enBonnet/greeny-theme?style=for-the-badge&label=Open%20VSX%20Registry&color=C4B5FF)](https://open-vsx.org/extension/enBonnet/greeny-theme)
+[![Open VSX Registry](https://img.shields.io/open-vsx/v/enBonnet/green-night-theme?style=for-the-badge&label=Open%20VSX%20Registry&color=C4B5FF)](https://open-vsx.org/extension/enBonnet/green-night-theme)
 
 ## Using the Theme
 
 1. Open the Command Palette (`Ctrl+Shift+P` or `Cmd+Shift+P`)
 2. Type "Preferences: Color Theme" and press Enter
-3. Search for "Greeny Theme"
-4. Select either "Greeny Theme" or "Greeny Theme Soft" from the list
+3. Search for "Green Night Theme"
+4. Select either "Green Night Theme" or "Green Night Theme Soft" from the list
 
 ### Recommended Settings
 
@@ -133,7 +133,7 @@ For the best experience, add these to your `settings.json`:
 
 ```json
 {
-  "workbench.colorTheme": "Greeny Theme",
+  "workbench.colorTheme": "Green Night Theme",
   "editor.fontFamily": "'Victor Mono', Monaco, Menlo, 'Courier New', monospace",
   "editor.fontSize": 16,
   "editor.lineHeight": 1.5,
@@ -146,8 +146,8 @@ For the best experience, add these to your `settings.json`:
 
 ## Theme Variants
 
-- **Greeny Theme** — Vibrant, high-contrast version
-- **Greeny Theme Soft** — Desaturated version for reduced eye strain
+- **Green Night Theme** — Vibrant, high-contrast version
+- **Green Night Theme Soft** — Desaturated version for reduced eye strain
 
 ## Development
 
@@ -173,10 +173,10 @@ pnpm run package
 
 ```
 ├── src/
-│   └── greeny.yml      # Theme source file (YAML)
+│   └── green-night.yml      # Theme source file (YAML)
 ├── theme/
-│   ├── greeny.json     # Generated theme
-│   └── greeny-soft.json
+│   ├── green-night.json     # Generated theme
+│   └── green-night-soft.json
 ├── scripts/
 │   ├── build.js          # Build script
 │   └── generate.js       # Theme generator
@@ -198,8 +198,8 @@ For updates, star this repository and follow me on [GitHub](https://github.com/e
 
 ## Credits
 
-- Inspired by the Greeny brand colors
-- Based on the [Dracula Theme](https://draculatheme.com/) schema, with colors adapted from the Greeny brand palette
+- Inspired by the green color palette
+- Based on the [Dracula Theme](https://draculatheme.com/) schema, with colors adapted from the green color palette
 - Thanks to all contributors who help improve this theme
 
 ## License
