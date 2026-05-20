@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Language Fixes | Green Night Theme</title>
+    <meta name="description" content="Explicit scoping fixes for over 30 modern programming languages in the Green Night Theme.">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="icon" type="image/png" href="./images/icon.png">
+    <style>
+        .page-header {
+            text-align: center;
+            padding: 120px 20px 60px;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        .page-header h1 {
+            font-size: 3.5rem;
+            margin-bottom: 20px;
+            background: linear-gradient(135deg, var(--fg) 0%, var(--mint) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .page-header p {
+            font-size: 1.2rem;
+            color: var(--sage);
+        }
+        
+        .search-container {
+            max-width: 600px;
+            margin: 0 auto 40px;
+            padding: 0 20px;
+        }
+        
+        .search-input {
+            width: 100%;
+            padding: 16px 24px;
+            border-radius: 12px;
+            border: 1px solid rgba(75, 234, 154, 0.3);
+            background: rgba(26, 32, 29, 0.8);
+            color: var(--fg);
+            font-size: 1.1rem;
+            font-family: inherit;
+            outline: none;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+        }
+        
+        .search-input:focus {
+            border-color: var(--mint);
+            box-shadow: 0 4px 20px rgba(95, 255, 192, 0.15);
+        }
+
+        .lang-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+            gap: 20px;
+            max-width: 1200px;
+            margin: 0 auto 80px;
+            padding: 0 20px;
+        }
+
+        .lang-card {
+            background: var(--bg-light);
+            border-radius: 12px;
+            padding: 24px;
+            border: 1px solid rgba(75, 234, 154, 0.1);
+            transition: transform 0.3s ease, border-color 0.3s ease;
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .lang-card:hover {
+            transform: translateY(-4px);
+            border-color: rgba(95, 255, 192, 0.4);
+        }
+
+        .lang-name {
+            font-size: 1.4rem;
+            font-weight: 600;
+            color: var(--fg);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .lang-scope-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        .scope-badge {
+            background: rgba(196, 181, 255, 0.1);
+            color: var(--lavender);
+            padding: 6px 12px;
+            border-radius: 6px;
+            font-size: 0.85rem;
+            font-family: monospace;
+            border: 1px solid rgba(196, 181, 255, 0.2);
+            word-break: break-all;
+        }
+        
+        .empty-state {
+            text-align: center;
+            grid-column: 1 / -1;
+            padding: 40px;
+            color: var(--sage);
+            font-size: 1.2rem;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <a href="index.html" class="logo">
+            <img src="./images/icon.png" alt="Green Night Logo">
+            Green Night
+        </a>
+        <nav class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="languages.html" style="color: var(--mint);">Language Fixes</a>
+            <a href="https://github.com/enbonnet/green-night-theme-vscode" target="_blank" rel="noopener">GitHub</a>
+        </nav>
+    </header>
+
+    <main>
+        <div class="page-header">
+            <h1>Language Scoping Fixes</h1>
+            <p>We've meticulously mapped specific TextMate scopes for over 30 modern programming languages to ensure semantic highlighting is pixel-perfect.</p>
+        </div>
+
+        <div class="search-container">
+            <input type="text" id="searchInput" class="search-input" placeholder="Search languages... (e.g., TypeScript, Rust)">
+        </div>
+
+        <div class="lang-grid" id="langGrid">
+            <!-- Language Cards injected via JS -->
+            <div id="emptyState" class="empty-state">No languages found matching your search.</div>
+        </div>
+    </main>
+
+    <footer>
+        <p>Crafted with 💚 by <a href="https://enbonnet.com" target="_blank" rel="noopener">Ender Bonnet</a>. Licensed under MIT.</p>
+    </footer>
+
+    <script>
+        const languages = [
+            { name: "JavaScript (JS)", scopes: ["variable.other.constant.js"] },
+            { name: "TypeScript (TS)", scopes: ["variable.other.constant.ts"] },
+            { name: "JSX", scopes: ["variable.other.constant.js", "support.class.component.jsx"] },
+            { name: "TSX", scopes: ["variable.other.constant.tsx", "support.class.component.tsx"] },
+            { name: "C", scopes: ["storage.type.c"] },
+            { name: "C++", scopes: ["generic"] },
+            { name: "C#", scopes: ["keyword.type.cs", "storage.type.cs"] },
+            { name: "Go", scopes: ["source.go storage.type"] },
+            { name: "Java", scopes: ["source.java storage.type"] },
+            { name: "Groovy", scopes: ["source.groovy storage.type"] },
+            { name: "Kotlin", scopes: ["storage.type.kotlin"] },
+            { name: "Scala", scopes: ["storage.type.scala"] },
+            { name: "Dart", scopes: ["storage.type.dart"] },
+            { name: "Swift", scopes: ["storage.type.attribute.swift"] },
+            { name: "ObjC", scopes: ["storage.type.objc"] },
+            { name: "PHP", scopes: ["storage.type.php"] },
+            { name: "Python", scopes: ["docstrings"] },
+            { name: "Ruby", scopes: ["variable.other.readwrite.instance.ruby"] },
+            { name: "Rust", scopes: ["storage.class.std.rust", "storage.type.core.rust"] },
+            { name: "Haskell", scopes: ["storage.type.haskell"] },
+            { name: "OCaml", scopes: ["storage.type.ocaml"] },
+            { name: "Elixir", scopes: ["storage.type.elixir"] },
+            { name: "Lua", scopes: ["support.function.any-method.lua"] },
+            { name: "Perl", scopes: ["constant.other.key.perl"] },
+            { name: "Shell", scopes: ["source.shell variable.other"] },
+            { name: "PowerShell", scopes: ["source.powershell"] },
+            { name: "SCSS", scopes: ["meta.attribute-selector.scss"] },
+            { name: "CSS", scopes: ["punctuation.separator.list.comma.css"] },
+            { name: "YAML", scopes: ["entity.name.tag.yaml"] },
+            { name: "TOML", scopes: ["entity.name.section.toml"] },
+            { name: "GraphQL", scopes: ["entity.name.fragment.graphql"] },
+            { name: "Markdown", scopes: ["markup.heading.markdown"] },
+            { name: "Makefile", scopes: ["meta.scope.prerequisites.makefile"] },
+            { name: "CoffeeScript", scopes: ["meta.variable.assignment.destructured.object.coffee"] },
+            { name: "Vue", scopes: ["punctuation.section.embedded.begin.vue"] },
+            { name: "Svelte", scopes: ["punctuation.section.embedded.begin.svelte"] },
+            { name: "Terraform/HCL", scopes: ["storage.type.hcl"] },
+            { name: "Prisma", scopes: ["storage.type.prisma"] }
+        ];
+
+        const grid = document.getElementById('langGrid');
+        const emptyState = document.getElementById('emptyState');
+        const searchInput = document.getElementById('searchInput');
+
+        function renderCards(filterText = '') {
+            // Remove existing cards
+            document.querySelectorAll('.lang-card').forEach(card => card.remove());
+            
+            const lowerFilter = filterText.toLowerCase();
+            const filtered = languages.filter(lang => 
+                lang.name.toLowerCase().includes(lowerFilter) || 
+                lang.scopes.some(s => s.toLowerCase().includes(lowerFilter))
+            );
+
+            if (filtered.length === 0) {
+                emptyState.style.display = 'block';
+            } else {
+                emptyState.style.display = 'none';
+                filtered.forEach(lang => {
+                    const card = document.createElement('div');
+                    card.className = 'lang-card';
+                    
+                    const name = document.createElement('div');
+                    name.className = 'lang-name';
+                    name.textContent = lang.name;
+                    
+                    const scopeContainer = document.createElement('div');
+                    scopeContainer.className = 'lang-scope-container';
+                    
+                    lang.scopes.forEach(scope => {
+                        const badge = document.createElement('span');
+                        badge.className = 'scope-badge';
+                        badge.textContent = scope;
+                        scopeContainer.appendChild(badge);
+                    });
+                    
+                    card.appendChild(name);
+                    card.appendChild(scopeContainer);
+                    grid.insertBefore(card, emptyState);
+                });
+            }
+        }
+
+        renderCards();
+
+        searchInput.addEventListener('input', (e) => {
+            renderCards(e.target.value);
+        });
+    </script>
+</body>
+</html>
