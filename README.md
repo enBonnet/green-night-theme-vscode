@@ -17,6 +17,7 @@
 - [Color Palette](#color-palette)
 - [Supported Languages](#supported-languages)
 - [Development](#development)
+- [Related Projects](#related-projects)
 - [Contributing](#contributing)
 - [License](#license)
 - [Credits](#credits)
@@ -195,6 +196,10 @@ Contributions are welcome! If you find any issues or have suggestions for improv
 ## Stay Updated
 
 For updates, star this repository and follow me on [GitHub](https://github.com/enbonnet).
+
+## Related Projects
+
+- [Green Night Theme for Ghostty](https://github.com/enBonnet/green-night-theme-ghostty) — The same color palette, adapted for the Ghostty terminal emulator
 
 ## Credits
 
