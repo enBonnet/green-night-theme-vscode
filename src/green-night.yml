@@ -9,7 +9,7 @@ greeny:
   base:
     - &BG        '#171C19'  # Neutral dark gray
     - &FG        '#FAFFFB'  # Bright Greenish-White
-    - &SELECTION '#222926'  # Neutral selection highlight
+    - &SELECTION '#2D3831'  # Neutral selection highlight
     - &COMMENT   '#7FC99B'  # Bright Sage
     - &CYAN      '#5FFFC0'  # Neon Brand Mint
     - &GREEN     '#4BEA9A'  # Bright Green
@@ -42,7 +42,7 @@ greeny:
     - &TEMP_QUOTES          '#FFF58F'  # Bright Yellow for string quotes
     - &TEMP_PROPERTY_QUOTES '#8BFFE2'  # Bright Cyan for property quotes
   other:
-    - &LineHighlight '#22292675'  # Selection with transparency
+    - &LineHighlight '#22292699'  # Selection with transparency
     - &NonText       '#FFFFFF2A'
     - &WHITE         '#FFFFFF'
     - &TAB_DROP_BG   '#22292670'  # Selection with transparency
